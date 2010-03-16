@@ -1,4 +1,6 @@
 Billmebob::Application.routes.draw do |map|
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,5 +57,6 @@ Billmebob::Application.routes.draw do |map|
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-  root :to=>"Invoices#index"
+  root :to=>"invoices#index"
+
 end
