@@ -1,0 +1,48 @@
+<% content_for :header do %>
+  <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "jquery.color" %>
+  <%= javascript_include_tag "rails" %>
+  <%= javascript_include_tag "application" %>
+<% end %>
+
+<% form_for :invoice, :url=>{:action=>"create"} do |f| %>
+  <%= f.error_messages %>
+  <div class="span-24 last">
+    <div class="span-8 from_company">
+      <div class="span-7">
+        <%= f.label "Your Company" %>
+        <br/>
+        <%= f.text_field :by_company %>
+      </div>
+      <div class="span-7">
+        <%= f.label "Company's address" %>
+        <br/>
+        <%= f.text_area :by_address, :rows=>"4" %>
+      </div>
+    </div>
+
+    <div class="span-8 to_company">
+      <div class="span-7">
+        <%= f.label "Client" %>
+        <br/>
+        <%= f.text_field :by_company %>
+      </div>
+      <div class="span-7">
+        <%= f.label "Client's address" %>
+        <br/>
+        <%= f.text_area :by_address, :rows=>"4" %>
+      </div>
+    </div>
+    <div class="span-5">
+      <div class="qmenu">
+        <div class="qselected"></div>
+          <div class="qitems">
+            <div class="qitem"><%= image_tag "both.png" %></div>
+            <div class="qitem"><%= image_tag "center.png" %></div>
+            <br/>
+            <div class="qitem"><%= image_tag "right.png" %></div>
+          </div>
+        </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,120 @@
+body{
+        background: #eeeeee;
+}
+
+.container{
+        background: #ffffff;
+}
+
+.header{
+        background: #9EADCC;
+        #navbar
+        {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                margin-left: 10px;
+                li{
+                        list-style: none;
+                }
+        }
+}
+
+.content{
+        padding: 10px;
+        label{
+                font-weight: normal;
+                font-size: 120%;
+                font-family: Georgia;
+                margin-right: 5px;
+        }
+
+        .from_company{
+                text-align: left;
+                input{
+                       margin-top: 0px;
+                       margin-bottom: 10px;
+                       width: 250px;
+                       font-size: 150%;
+                       font-family: Georgia;
+                       color: #999999;
+                       padding: 5px;
+                }
+                input:focus{
+                       padding: 5px;
+                       color: #333333; 
+                }
+                textarea{
+                        width: 250px;
+                        font-size: 150%;
+                }
+        }
+        .to_company{
+                text-align: left;
+                input{
+                       margin-top: 0px;
+                       margin-bottom: 10px;
+                       width: 250px;
+                       font-size: 150%;
+                       font-family: Georgia;
+                       color: #999999;
+                       padding: 5px;
+                }
+                input:focus{
+                       padding: 5px;
+                       color: #333333; 
+                }
+                textarea{
+                        width: 250px;
+                        font-size: 150%;
+                }
+        }
+}
+
+
+.qmenu{
+    .qselected{
+        text-align: center;
+        width: 85px;
+        cursor: pointer;
+    }
+    
+    .qitems{
+        position: absolute;
+        z-index: 5;
+        background: #eeeeee;
+        border: 1px solid #dddddd;
+        .qitem{
+            width: 85px;
+            padding: 5px;
+            float: left;
+             img{
+                border: 2px solid #dddddd;
+            }
+            img:hover{
+                border: 2px solid #FF99CC;
+            }
+        }
+    }
+    
+    .down_arr{
+        background: #996699;
+        /*
+        background-position: center;
+        */
+        font-family: Georgia;
+        text-transform: uppercase;
+        clear: both;
+        color: #ffffff;
+        height: 18px;
+        width: 85px;
+        z-index: 6;
+        position: absolute;
+        margin-top: -40px;
+        text-align: center;
+    }
+}
+
+.footer p{
+        text-align: center;
+        color: #999999;
+}

@@ -1,0 +1,87 @@
+body { background: #eeeeee; }
+.container { background: #ffffff; }
+.header { background: #9eadcc; }
+.header #navbar {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.header #navbar li { list-style: none; }
+.content { padding: 10px; }
+.content label {
+  font-weight: normal;
+  font-size: 120%;
+  font-family: Georgia;
+  margin-right: 5px;
+}
+.content .from_company { text-align: left; }
+.content .from_company input {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  width: 250px;
+  font-size: 150%;
+  font-family: Georgia;
+  color: #999999;
+  padding: 5px;
+}
+.content .from_company input:focus {
+  padding: 5px;
+  color: #333333;
+}
+.content .from_company textarea {
+  width: 250px;
+  font-size: 150%;
+}
+.content .to_company { text-align: left; }
+.content .to_company input {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  width: 250px;
+  font-size: 150%;
+  font-family: Georgia;
+  color: #999999;
+  padding: 5px;
+}
+.content .to_company input:focus {
+  padding: 5px;
+  color: #333333;
+}
+.content .to_company textarea {
+  width: 250px;
+  font-size: 150%;
+}
+.qmenu .qselected {
+  text-align: center;
+  width: 85px;
+  cursor: pointer;
+}
+.qmenu .qitems {
+  position: absolute;
+  z-index: 5;
+  background: #eeeeee;
+  border: 1px solid #dddddd;
+}
+.qmenu .qitems .qitem {
+  width: 85px;
+  padding: 5px;
+  float: left;
+}
+.qmenu .qitems .qitem img { border: 2px solid #dddddd; }
+.qmenu .qitems .qitem img:hover { border: 2px solid #ff99cc; }
+.qmenu .down_arr {
+  background: #996699;
+  font-family: Georgia;
+  text-transform: uppercase;
+  clear: both;
+  color: #ffffff;
+  height: 18px;
+  width: 85px;
+  z-index: 6;
+  position: absolute;
+  margin-top: -40px;
+  text-align: center;
+}
+.footer p {
+  text-align: center;
+  color: #999999;
+}

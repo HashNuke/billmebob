@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <title>BillMeBob</title>
+    <link href='/stylesheets/blueprint/screen.css' media='screen, projection' rel='stylesheet' type='text/css' />
+    <link href='/stylesheets/blueprint/print.css' media='print' rel='stylesheet' type='text/css' />
+    <link href='/stylesheets/site.css' media='screen, projection' rel='stylesheet' type='text/css' />
+    
+    <%= yield(:header) %>
+    <!--[if IE]>
+      <link href='/stylesheets/blueprint/ie.css' media='screen, projection' rel='stylesheet' type='text/css' />
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="header span-24 last">
+        <ul id="navbar">
+          <li><%= link_to "New Invoice", "/invoices/new" %></li>
+        </ul>
+      </div>
+
+      <div class="span-24 last">
+        <%- flash.each do |type, message| -%>
+        <div id='flash_#{type}'>
+          <p><%= message %></p>
+        </div>
+        <%- end -%>
+      </div>
+  
+      <div class="content span-24 last">
+        <%= yield %>
+      </div>
+      <div class="span-24 last footer">
+        <p>&copy;2010 Akash Manohar</p>
+      </div>
+    </div>
+  </body>
+</html>
+

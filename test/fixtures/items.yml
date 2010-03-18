@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  invoice_id: MyString
+  name: MyString
+  quantity: 1
+  cost: 1
+
+two:
+  invoice_id: MyString
+  name: MyString
+  quantity: 1
+  cost: 1

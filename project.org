@@ -1,0 +1,28 @@
+
+Invoice
+- ID
+- paperclip
+- by_company
+- by_address
+- by_phone
+- to_company
+- to_address
+- to_phone
+- show_yes
+form total calculated dynamically (loop the totalcost for item)
+
+item
+- ID
+- invoiceID
+- name
+- quantity (hours)
+- cost (per hour cost)
+- total_cost
+totalCost = quantity*cost
+
+pay
+- invoiceID
+- paid
+- paid_on
+- due
+- due_by

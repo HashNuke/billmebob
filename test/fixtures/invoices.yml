@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  by_company: MyString
+  by_address: MyString
+  to_company: MyString
+  to_address: MyString
+
+two:
+  by_company: MyString
+  by_address: MyString
+  to_company: MyString
+  to_address: MyString
