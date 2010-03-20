@@ -45,17 +45,17 @@
           Quantity
         %div{:class=>"span-2 icosth"}
           Cost
-        %div{:class=>"span-4 last"}
+        %div{:class=>"span-2 taxh last"}
       - f.fields_for :items do |builder|
         %div{:class=>"itemlist span-24 last"}
           %div{:class=>"span-7 iname"}
             =builder.text_field :name
           %div{:class=>"span-2 iquantity"}
             =builder.text_field :quantity
-          %div{:class=>"span-4 icost"}
+          %div{:class=>"span-2 icost"}
             =builder.text_field :cost
-          %div{:class=>"span-4 last"}
-
+          %div{:class=>"span-2 last"}
+            =builder.text_field :tax
     %div{:class=>"formbuttons span-16"}
       = f.submit 'Create', :class=>"submitbutton"
       or
