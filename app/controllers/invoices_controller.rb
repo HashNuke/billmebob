@@ -6,10 +6,12 @@ class InvoicesController < ApplicationController
 
   def new
     @invoice = Invoice.new
+    3.times {@invoice.items.build}
   end
 
   def create
     @invoice = Invoice.new(params[:invoice])
+    
   end
 
   def edit

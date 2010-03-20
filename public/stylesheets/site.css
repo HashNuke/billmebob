@@ -1,12 +1,12 @@
 body { background: #eeeeee; }
 .container { background: #ffffff; }
-.header { background: #9eadcc; }
 .header #navbar {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
 }
 .header #navbar li { list-style: none; }
+.topsep { border: 1px dashed #cccccc; }
 .content { padding: 10px; }
 .content label {
   font-weight: normal;
@@ -50,6 +50,27 @@ body { background: #eeeeee; }
   width: 250px;
   font-size: 150%;
 }
+.content .sectiontitle {
+  margin-top: 20px;
+  font-size: 180%;
+  color: #666666;
+  font-family: Georgia;
+}
+.content .formbuttons { text-align: center; }
+.content .formbuttons .submitbutton {
+  font-size: 180%;
+  font-family: Georgia;
+}
+.itemhead {
+  background: #666666;
+  color: #ffffff;
+}
+.itemhead .inameh { text-align: center; }
+.itemhead .iquantityh { text-align: center; }
+.itemhead .icosth { text-align: center; }
+.itemlist .iname input { width: 250px; }
+.itemlist .iquantity input { width: 60px; }
+.itemlist .icost input { width: 60px; }
 .qmenu .qselected {
   text-align: center;
   width: 85px;
