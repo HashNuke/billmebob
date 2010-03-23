@@ -56,10 +56,18 @@ body { background: #eeeeee; }
   color: #666666;
   font-family: Georgia;
 }
-.content .formbuttons { text-align: center; }
+.content .formbuttons {
+  margin-top: 20px;
+  text-align: center;
+}
 .content .formbuttons .submitbutton {
   font-size: 180%;
   font-family: Georgia;
+}
+.currency_s {
+  margin-left: 30px;
+  font-family: Georgia;
+  font-size: 120%;
 }
 .itemhead {
   background: #666666;
@@ -68,9 +76,27 @@ body { background: #eeeeee; }
 .itemhead .inameh { text-align: center; }
 .itemhead .iquantityh { text-align: center; }
 .itemhead .icosth { text-align: center; }
-.itemlist .iname input { width: 250px; }
-.itemlist .iquantity input { width: 60px; }
-.itemlist .icost input { width: 60px; }
+.itemhead .itaxh { text-align: center; }
+.itemlist .iname { text-align: center; }
+.itemlist .iname input {
+  width: 250px;
+  padding: 2px;
+}
+.itemlist .iquantity { text-align: center; }
+.itemlist .iquantity input {
+  width: 28px;
+  padding: 2px;
+}
+.itemlist .icost { text-align: center; }
+.itemlist .icost input {
+  width: 60px;
+  padding: 2px;
+}
+.itemlist .itax { text-align: center; }
+.itemlist .itax input {
+  width: 20px;
+  padding: 2px;
+}
 .qmenu .qselected {
   text-align: center;
   width: 85px;

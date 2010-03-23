@@ -11,7 +11,8 @@ class InvoicesController < ApplicationController
 
   def create
     @invoice = Invoice.new(params[:invoice])
-    
+    @invoice.save
+    redirect_to @invoice
   end
 
   def edit
@@ -23,9 +24,13 @@ class InvoicesController < ApplicationController
     @invoice.update_attributes(params[:invoice])
   end
 
+  def show
+  end
+  
   def destroy
     @invoice = Invoice.find(params[:id])
     @invoice.destroy
+    redirect_to :new
   end
 
   def about

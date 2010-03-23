@@ -25,37 +25,45 @@
         = f.label "Client's address"
         %br
         = f.text_area :by_address, :rows=>"4"
-    %div{:class=>"span-5 last"}
-      %div{:class=>"qmenu"}
-        %div{:class=>"qselected"}
-        %div{:class=>"qitems"}
-          %div{:class=>"qitem"}
-            = image_tag "both.png"
-          %div{:class=>"qitem"}
-            = image_tag "center.png"
-          %br
-          %div{:class=>"qitem"}
-            = image_tag "right.png"
+    %div{:class=>"span-6 last"}
+      %div{:class=>"span-2"}
+        %div{:class=>"qmenu"}
+          %div{:class=>"qselected"}
+          %div{:class=>"qitems"}
+            %div{:class=>"qitem"}
+              = image_tag "both.png"
+            %div{:class=>"qitem"}
+              = image_tag "center.png"
+            %br
+            %div{:class=>"qitem"}
+              = image_tag "right.png"
+      %div{:class=>"currency_s span-3"}
+        Currency
+        = f.select(:currency, [["$".html_safe], ["&euro;".html_safe], ["&pound;".html_safe], ["&yen;".html_safe]])
     %div{:class=>"prodserv span-24 last"}
       %h2{:class=>"sectiontitle"} Products/Services
       %div{:class=>"itemhead span-23 last"}
         %div{:class=>"span-7 inameh"}
-          Products
-        %div{:class=>"span-2 iquantityh"}
-          Quantity
-        %div{:class=>"span-2 icosth"}
-          Cost
-        %div{:class=>"span-2 taxh last"}
+          = f.select(:item_title,[["Products"], ["Services"]])
+        %div{:class=>"span-3 iquantityh"}
+          = f.select(:quantity_title,[["Quantity"], ["Hours"]])
+        %div{:class=>"span-3 icosth"}
+          = f.select(:cost_title,[["Per Unit"], ["Per Hour"]])
+        %div{:class=>"span-3 itaxh last"}
+          = f.select(:cost_title,[["Tax"], ["VAT"], ["Service Tax"]])
       - f.fields_for :items do |builder|
         %div{:class=>"itemlist span-24 last"}
+          %div{:class=>"span-1 iname"}
+            =builder.check_box :_destroy
           %div{:class=>"span-7 iname"}
             =builder.text_field :name
-          %div{:class=>"span-2 iquantity"}
+          %div{:class=>"span-3 iquantity"}
             =builder.text_field :quantity
-          %div{:class=>"span-2 icost"}
+          %div{:class=>"span-3 icost"}
             =builder.text_field :cost
-          %div{:class=>"span-2 last"}
+          %div{:class=>"span-3 last itax"}
             =builder.text_field :tax
+            \%
     %div{:class=>"formbuttons span-16"}
       = f.submit 'Create', :class=>"submitbutton"
       or
