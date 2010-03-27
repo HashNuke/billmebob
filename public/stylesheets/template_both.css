@@ -1,0 +1,91 @@
+#navbar
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    list-style-type: none;
+}
+
+#navbar li{
+    list-style: none;
+}
+
+#navbar li a{
+    color: #ffffff;
+    font-weight: bold; 
+    text-decoration: none;
+}
+
+.header .box { 
+  padding: 0px;
+  background: #333333; 
+}
+
+.header .boxtop div { 
+  font-size: 0;
+  height: 6px; 
+}
+.header .boxbottom { 
+  background: url(/images/se.gif) no-repeat bottom right; 
+}
+.header .boxbottom div { 
+  font-size: 0;
+  height: 6px; 
+  background: url(/images/sw.gif) no-repeat bottom left; 
+}
+.header .boxcontent {
+  padding: 0px 6px 0px 6px;
+}
+
+.bycomp{
+    font-size: 230%;
+}
+
+.byaddr{
+    font-size: 120%;
+    color: #666666;
+}
+
+.tocomp{
+    font-size: 130%;
+    font-weight: bold;
+}
+
+.toaddr{
+    font-size: 120%;
+    color: #666666;
+}
+
+.date{
+    font-weight: bold;
+}
+
+.producthead{
+    font-size: 130%;
+    font-weight: bold;
+    background: #eeeeee;
+    border: 1px dashed #999999;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.eachprod{
+    font-size: 120%;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.totalhead{
+    padding-top: 30px;
+}
+
+.bsp{
+    font-weight: bold;
+}
+
+.footer p{
+        margin-top: 50px;
+        text-align: center;
+        color: #999999;
+}

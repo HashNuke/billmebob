@@ -1,4 +1,5 @@
 - content_for :header do
+  = stylesheet_link_tag "site.css"
   = javascript_include_tag "jquery"
   = javascript_include_tag "jquery.color"
   = javascript_include_tag "rails"
@@ -20,11 +21,11 @@
       %div{:class=>"span-7"}
         = f.label "Client"
         %br
-        = f.text_field :by_company
+        = f.text_field :to_company
       %div{:class=>"span-7"}
         = f.label "Client's address"
         %br
-        = f.text_area :by_address, :rows=>"4"
+        = f.text_area :to_address, :rows=>"4"
     %div{:class=>"span-6 last"}
       %div{:class=>"span-2"}
         = f.hidden_field :template
@@ -52,7 +53,7 @@
         %div{:class=>"span-3 icosth"}
           = f.select(:cost_title,[["Per Unit"], ["Per Hour"]])
         %div{:class=>"span-3 itaxh last"}
-          = f.select(:cost_title,[["Tax"], ["VAT"], ["Service Tax"]])
+          = f.select(:tax_title,[["Tax"], ["VAT"], ["Service Tax"]])
       - f.fields_for :items do |builder|
         %div{:class=>"itemlist span-24 last"}
           %div{:class=>"span-7 iname"}

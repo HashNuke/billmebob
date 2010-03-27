@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20100327062945) do
     t.string   "invoice_id"
     t.string   "name"
     t.integer  "quantity"
-    t.integer  "cost"
+    t.decimal  "cost"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "tax"

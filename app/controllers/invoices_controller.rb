@@ -25,6 +25,20 @@ class InvoicesController < ApplicationController
   end
 
   def show
+    
+    @invoice = Invoice.find(params[:id])
+    if(@invoice.template=="both")
+      render :template => "invoices/templates/both.html.haml"
+    end
+
+    if(@invoice.template=="center")
+      render :template => "invoices/templates/center.html.haml"
+    end
+
+    if(@invoice.template=="right")
+      render :template => "invoices/templates/right.html.haml"
+    end 
+    
   end
   
   def destroy

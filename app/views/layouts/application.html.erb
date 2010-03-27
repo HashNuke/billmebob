@@ -5,8 +5,7 @@
     <title>BillMeBob</title>
     <link href='/stylesheets/blueprint/screen.css' media='screen, projection' rel='stylesheet' type='text/css' />
     <link href='/stylesheets/blueprint/print.css' media='print' rel='stylesheet' type='text/css' />
-    <link href='/stylesheets/site.css' media='screen, projection' rel='stylesheet' type='text/css' />
-    
+        
     <%= yield(:header) %>
     <!--[if IE]>
       <link href='/stylesheets/blueprint/ie.css' media='screen, projection' rel='stylesheet' type='text/css' />
@@ -15,9 +14,15 @@
   <body>
     <div class="container">
       <div class="header span-24 last">
-        <ul id="navbar">
-          <li><%= link_to "New Invoice", "/invoices/new" %></li>
-        </ul>
+        <div class="box">
+          <div class='boxtop'><div></div></div>
+            <div class='boxcontent'>
+              <ul id="navbar">
+                <li><%= link_to "New Invoice", "/invoices/new" %></li>
+              </ul>
+            </div>
+            <div class='boxbottom'><div></div></div>
+        </div>
       </div>
 
       <div class="span-24 last">

@@ -4,7 +4,7 @@ class CreateItems < ActiveRecord::Migration
       t.string :invoice_id
       t.string :name
       t.integer :quantity
-      t.integer :cost
+      t.decimal :cost
 
       t.timestamps
     end
