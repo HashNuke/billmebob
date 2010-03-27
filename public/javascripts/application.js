@@ -3,20 +3,26 @@
 
 jQuery(document).ready(function($){
 
+        $("#invoice_currency").change(function(){
+                $(".currency_symbol").html($(this).val());
+            });
 
+        $('.qmenu .qselected').live('click', function(){
+                $(".qmenu .qitems").toggle();
+            });
 
-    $('.qmenu .qselected').live('click', function(){
-        $(".qmenu .qitems").toggle();
-    });
+        $(".qmenu .qitems .qitem").bind('click', function(){
+                $(".qmenu .qselected").html($(this).html()+'<div class="down_arr">Template</div>');
+                $("#invoice_template").val($(this).children().eq(0).attr('alt'));
+                $(".qmenu .down_arr").animate({ backgroundColor: "#FF3D3D"}, 'slow');
+                $(".qmenu .down_arr").animate({ backgroundColor: "#996699"}, 'slow');
+                $(".qmenu .qitems").hide();
+            });
 
-    $(".qmenu .qitems .qitem").bind('click', function(){
-        $(".qmenu .qselected").html($(this).html()+'<div class="down_arr">Template</div>');
-
-        $(".qmenu .down_arr").animate({ backgroundColor: "#FF3D3D"}, 'slow');
-        $(".qmenu .down_arr").animate({ backgroundColor: "#996699"}, 'slow');
         $(".qmenu .qitems").hide();
-    });
+        $(".qmenu .qselected").html($(".qmenu .qitems .qitem:first").html()+'<div class="down_arr">Template</div>');
 
-    $(".qmenu .qitems").hide();
-    $(".qmenu .qselected").html($(".qmenu .qitems .qitem:first").html()+'<div class="down_arr">Template</div>');
+        $(".delete_item").bind('click', function(){
+                
+            });
 });

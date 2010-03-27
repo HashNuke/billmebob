@@ -69,31 +69,49 @@ body { background: #eeeeee; }
   font-family: Georgia;
   font-size: 120%;
 }
-.itemhead {
-  background: #666666;
+.als { margin-top: 30px; }
+.prodserv .itemhead {
+  background: #eeeeee;
+  border: 1px dashed #999999;
   color: #ffffff;
 }
-.itemhead .inameh { text-align: center; }
-.itemhead .iquantityh { text-align: center; }
-.itemhead .icosth { text-align: center; }
-.itemhead .itaxh { text-align: center; }
-.itemlist .iname { text-align: center; }
-.itemlist .iname input {
-  width: 250px;
+.prodserv .itemhead .inameh { text-align: center; }
+.prodserv .itemhead .inameh select {
+  font-family: Georgia;
+  font-size: 150%;
+}
+.prodserv .itemhead .iquantityh { text-align: center; }
+.prodserv .itemhead .iquantityh select {
+  font-family: Georgia;
+  font-size: 150%;
+}
+.prodserv .itemhead .icosth { text-align: center; }
+.prodserv .itemhead .icosth select {
+  font-family: Georgia;
+  font-size: 150%;
+}
+.prodserv .itemhead .itaxh { text-align: center; }
+.prodserv .itemhead .itaxh select {
+  font-family: Georgia;
+  font-size: 150%;
+}
+.prodserv .itemlist .iname { text-align: center; }
+.prodserv .itemlist .iname input {
+  width: 220px;
   padding: 2px;
 }
-.itemlist .iquantity { text-align: center; }
-.itemlist .iquantity input {
+.prodserv .itemlist .iquantity { text-align: center; }
+.prodserv .itemlist .iquantity input {
   width: 28px;
   padding: 2px;
 }
-.itemlist .icost { text-align: center; }
-.itemlist .icost input {
+.prodserv .itemlist .icost { text-align: center; }
+.prodserv .itemlist .icost input {
   width: 60px;
   padding: 2px;
 }
-.itemlist .itax { text-align: center; }
-.itemlist .itax input {
+.prodserv .itemlist .itax { text-align: center; }
+.prodserv .itemlist .itax input {
   width: 20px;
   padding: 2px;
 }

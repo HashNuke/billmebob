@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100320173919) do
+ActiveRecord::Schema.define(:version => 20100327062945) do
 
   create_table "invoices", :force => true do |t|
     t.string   "by_company"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20100320173919) do
     t.string   "cost_title"
     t.string   "tax_title"
     t.string   "currency"
+    t.string   "template",       :default => "both"
   end
 
   create_table "items", :force => true do |t|
