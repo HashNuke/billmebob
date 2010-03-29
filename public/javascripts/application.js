@@ -2,7 +2,9 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 jQuery(document).ready(function($){
-
+        
+        $("#invoice_issued_on").date_input();
+        $("#invoice_due_by").date_input();
         $("#invoice_currency").change(function(){
                 $(".currency_symbol").html($(this).val());
             });

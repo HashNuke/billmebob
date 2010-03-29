@@ -7,16 +7,45 @@ body{
 }
 
 .header{
-        /* background: #9EADCC; */
-        #navbar
-        {
-                margin-top: 5px;
-                margin-bottom: 5px;
-                margin-left: 10px;
-                li{
-                        list-style: none;
-                }
+        .box { 
+          padding: 0px;
+          background: #333333; 
         }
+
+        .boxtop div { 
+          font-size: 0;
+          height: 6px; 
+        }
+
+        .boxbottom { 
+          background: url(/images/se.gif) no-repeat bottom right; 
+        }
+
+        .boxbottom div { 
+          font-size: 0;
+          height: 6px; 
+          background: url(/images/sw.gif) no-repeat bottom left; 
+        }
+
+        .boxcontent {
+          padding: 0px 6px 0px 6px;
+        }
+}
+
+#navbar
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    list-style-type: none;
+    li{
+        list-style: none;
+        a{
+            color: #ffffff;
+            font-weight: bold; 
+            text-decoration: none;
+        }
+    }
 }
 
 .topsep{

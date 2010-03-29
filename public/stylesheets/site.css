@@ -1,11 +1,32 @@
 body { background: #eeeeee; }
 .container { background: #ffffff; }
-.header #navbar {
+.header .box {
+  padding: 0px;
+  background: #333333;
+}
+.header .boxtop div {
+  font-size: 0;
+  height: 6px;
+}
+.header .boxbottom { background: url(/images/se.gif) no-repeat bottom right; }
+.header .boxbottom div {
+  font-size: 0;
+  height: 6px;
+  background: url(/images/sw.gif) no-repeat bottom left;
+}
+.header .boxcontent { padding: 0px 6px 0px 6px; }
+#navbar {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
+  list-style-type: none;
 }
-.header #navbar li { list-style: none; }
+#navbar li { list-style: none; }
+#navbar li a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
 .topsep { border: 1px dashed #cccccc; }
 .content { padding: 10px; }
 .content label {

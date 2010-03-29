@@ -60,13 +60,30 @@
     font-weight: bold;
 }
 
+.topsep{
+    margin-top: 50px;
+}
+
 .producthead{
-    font-size: 130%;
+    font-size: 100%;
+    text-transform: uppercase;
     font-weight: bold;
     background: #eeeeee;
     border: 1px dashed #999999;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.fieldtitle{
+    text-align: right;
+    margin-top: 3px;
+}
+
+.fieldtitle span{
+    padding-right: 15px;
+    font-weight: bold;
+    color: #999999;
+    text-transform: uppercase;
 }
 
 .eachprod{
@@ -82,10 +99,25 @@
 
 .bsp{
     font-weight: bold;
+    text-transform: uppercase;
+}
+
+.bspa{
+    text-align: right;
+}
+
+.bspa span{
+    font-size: 120%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.totalamt{
+    font-size: 120%;
 }
 
 .footer p{
-        margin-top: 50px;
-        text-align: center;
-        color: #999999;
+    margin-top: 50px;
+    text-align: center;
+    color: #999999;
 }

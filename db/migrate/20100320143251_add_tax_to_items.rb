@@ -1,6 +1,6 @@
 class AddTaxToItems < ActiveRecord::Migration
   def self.up
-    add_column :items, :tax, :string
+    add_column :items, :tax, :string, {:default=>0}
   end
 
   def self.down

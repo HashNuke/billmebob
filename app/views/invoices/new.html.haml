@@ -1,7 +1,9 @@
 - content_for :header do
-  = stylesheet_link_tag "site.css"
+  = stylesheet_link_tag "site"
+  = stylesheet_link_tag "jquery.date"
   = javascript_include_tag "jquery"
   = javascript_include_tag "jquery.color"
+  = javascript_include_tag "jquery.date"
   = javascript_include_tag "rails"
   = javascript_include_tag "application"
 
@@ -44,6 +46,18 @@
         = f.select(:currency, [["$".html_safe], ["&euro;".html_safe], ["&pound;".html_safe], ["&yen;".html_safe]])
     %div{:class=>"als span-23 last"}
       ="&nbsp;".html_safe
+    
+    %div{:class=>"datefields span-20 last"}
+      .span-4
+        Issued on: 
+        = f.text_field :issued_on, :size=>"8"
+      .span-4
+        Due by: 
+        = f.text_field :due_by, :size=>"8"
+
+    %div{:class=>"als span-23 last"}
+      ="&nbsp;".html_safe
+      
     %div{:class=>"prodserv span-24 last"}
       %div{:class=>"itemhead span-23 last"}
         %div{:class=>"span-7 inameh"}
