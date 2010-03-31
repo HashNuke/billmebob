@@ -5,6 +5,14 @@ jQuery(document).ready(function($){
         
         $("#invoice_issued_on").date_input();
         $("#invoice_due_by").date_input();
+        $("#invoice_due_by").hide();
+        
+        $("#show_due").change(function(){
+                if($("#invoice_due_by:hidden"))
+                    $("#invoice_due_by").val("");
+                $("#invoice_due_by").toggle();
+            });
+
         $("#invoice_currency").change(function(){
                 $(".currency_symbol").html($(this).val());
             });

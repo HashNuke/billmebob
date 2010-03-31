@@ -16,12 +16,13 @@ class InvoicesController < ApplicationController
   end
 
   def edit
-    @invoice = Invoice.find(params[:invoice])
+    @invoice = Invoice.find(params[:id])
   end
 
   def update
     @invoice = Invoice.find(params[:id])
     @invoice.update_attributes(params[:invoice])
+    redirect_to @invoice
   end
 
   def show
