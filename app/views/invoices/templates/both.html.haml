@@ -2,9 +2,6 @@
   = stylesheet_link_tag "template_both"
 
 %div{:class=>"span-12 first"}
-  
-
-%div{:class=>"span-12 first"}
   %div{:class=>"bycomp span-11 last"}
     =@invoice.by_company
   %div{:class=>"byaddr span-11 last"}
@@ -12,6 +9,11 @@
   %div{:class=>"date span-10 last"}
     Date: 
     =@invoice.issued_on
+  - if !@invoice.due_by.nil?
+    %div{:class=>"date span-10 last"}
+      Due on: 
+      =@invoice.due_by
+
 %div{:class=>"fieldtitle span-6 last"}
   %span
     Customer:

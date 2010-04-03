@@ -8,28 +8,42 @@
   = javascript_include_tag "application"
 
 - form_for @invoice, :url=>{:action=>"create"} do |f|
-  = f.error_messages
+  = f.error_messages  
   %div{:class=>"span-24 last"}
     %div{:class=>"span-8 from_company"}
       %div{:class=>"span-7"}
         = f.label "Your Company"
+        %span{:class=>"reqfield"}*
         %br
         = f.text_field :by_company
       %div{:class=>"span-7"}
         = f.label "Company's address"
+        %span{:class=>"reqfield"}*
         %br
         = f.text_area :by_address, :rows=>"4"
     %div{:class=>"span-8 to_company"}
       %div{:class=>"span-7"}
         = f.label "Client"
+        %span{:class=>"reqfield"}*
         %br
         = f.text_field :to_company
       %div{:class=>"span-7"}
         = f.label "Client's address"
+        %span{:class=>"reqfield"}*
         %br
         = f.text_area :to_address, :rows=>"4"
     %div{:class=>"span-6 last"}
-      %div{:class=>"span-2"}
+      %div{:class=>"first last introbox span-6"}
+        %div
+          %span 1.
+          Enter details
+          %br
+          %span 2.
+          Create invoice
+          %br
+          %span 3.
+          Share URL or Print invoice
+      %div{:class=>"first span-2"}
         = f.hidden_field :template
         %div{:class=>"qmenu"}
           %div{:class=>"qselected"}
@@ -38,10 +52,7 @@
               = image_tag "both.png", :alt=>"both"
             %div{:class=>"qitem"}
               = image_tag "center.png", :alt=>"center"
-            %br
-            %div{:class=>"qitem"}
-              = image_tag "right.png", :alt=>"right"
-      %div{:class=>"currency_s span-3"}
+      %div{:class=>"last currency_s span-3"}
         Currency
         = f.select(:currency, [["$".html_safe], ["&euro;".html_safe], ["&pound;".html_safe], ["&yen;".html_safe]])
     %div{:class=>"als span-23 last"}
@@ -53,7 +64,7 @@
         = f.text_field :issued_on, :size=>"8"
       .span-7
         = check_box_tag "show_due"
-        Show due date: 
+        Show due date 
         = f.text_field :due_by, :size=>"8"
 
     %div{:class=>"als span-23 last"}
@@ -85,7 +96,28 @@
             \%
     %div{:class=>"add_item_button span-24 last"}
       = link_to_add_fields "Add item", f, :items
-    %div{:class=>"formbuttons span-16"}
+    %div{:class=>"als span-23 last"}
+      ="&nbsp;".html_safe
+    %div{:class=>"totalstuff span-24"}
+      %div{:class=>"totalhead span-4"}
+        Sub-total:
+      %div{:class=>"totalval span-2"}
+        %span{:class=>"currency_symbol"}$
+        %span{:class=>"subtotalval"}
+          0
+    %div{:class=>"totalstuff span-24"}
+      %div{:class=>"totalhead span-4"}
+        Total Tax:
+      %div{:class=>"totalval span-2"}
+        %span{:class=>"currency_symbol"}$
+        %span{:class=>"taxval"}
+          0
+    %div{:class=>"invoicetotal span-24"}
+      %div{:class=>"totalhead span-4"}
+        Total:
+      %div{:class=>"totalval span-2"}
+        %span{:class=>"currency_symbol"}$
+        %span{:class=>"formtotal"}
+          0
+    %div{:class=>"formbuttons span-24"}
       = f.submit 'Create', :class=>"submitbutton"
-      or
-      %input{:type=>"reset", :value=>"Reset"}

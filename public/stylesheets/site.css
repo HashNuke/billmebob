@@ -1,5 +1,41 @@
 body { background: #eeeeee; }
 .container { background: #ffffff; }
+.introbox {
+  background: #feefb3;
+  border: 1px solid #9f6000;
+  margin-bottom: 20px;
+}
+.introbox div {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 120%;
+  color: #9f6000;
+}
+.introbox div span {
+  font-weight: normal;
+  color: #666666;
+  font-size: 100%;
+}
+.reqfield {
+  color: #ff0000;
+  font-size: 140%;
+}
+.totalhead {
+  font-weight: bold;
+  text-align: right;
+  padding-right: 5px;
+}
+.invoicetotal {
+  padding-top: 4px;
+  font-size: 120%;
+}
+.errormessages {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #990000;
+  text-align: center;
+  font-size: 110%;
+}
 .header .box {
   padding: 0px;
   background: #333333;

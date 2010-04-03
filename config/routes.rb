@@ -59,6 +59,8 @@ Billmebob::Application.routes.draw do |map|
   
   root :to=>"invoices#new"
   resources :invoices
+  match ':id'=>'invoices#show', :as=>"single"
+  
   match ':controller(/:action(/:id(.:format)))'
 
 end

@@ -1,7 +1,7 @@
 class InvoicesController < ApplicationController
 
   def index
-    redirect_to :action=>"new"
+    render :new
   end
 
   def new
@@ -11,8 +11,17 @@ class InvoicesController < ApplicationController
 
   def create
     @invoice = Invoice.new(params[:invoice])
-    @invoice.save
-    redirect_to @invoice
+    if @invoice.issued_on.nil?
+      @invoice.issued_on=Date.today.to_s
+    end
+    if @invoice.save
+      redirect_to @invoice
+    else
+      if @invoice.items.length==0
+        3.times {@invoice.items.build}
+      end
+      render "new"
+    end
   end
 
   def edit
