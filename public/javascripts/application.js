@@ -7,6 +7,11 @@ jQuery(document).ready(function($){
         $("#invoice_due_by").date_input();
         $("#invoice_due_by").hide();
         
+        $(".delete_item").live("click", function(){
+                $(this).prev().val("1");
+                $(this).parent().parent().hide();
+            });
+
         $("#show_due").change(function(){
                 if($("#invoice_due_by:hidden"))
                     $("#invoice_due_by").val("");
@@ -32,7 +37,11 @@ jQuery(document).ready(function($){
         $(".qmenu .qitems").hide();
         $(".qmenu .qselected").html($(".qmenu .qitems .qitem:first").html()+'<div class="down_arr">Template</div>');
 
-        $(".delete_item").bind('click', function(){
-                
-            });
 });
+
+function add_item(association,content)
+{   
+    var new_id = new Date().getTime();
+    var regexp = new RegExp("new_"+association,"g");
+    $(".prodserv").append(content.replace(regexp, new_id));
+}

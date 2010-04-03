@@ -26,7 +26,6 @@ class InvoicesController < ApplicationController
   end
 
   def show
-    
     @invoice = Invoice.find(params[:id])
     if(@invoice.template=="both")
       render :template => "invoices/templates/both.html.haml"
@@ -39,7 +38,6 @@ class InvoicesController < ApplicationController
     if(@invoice.template=="right")
       render :template => "invoices/templates/right.html.haml"
     end 
-    
   end
   
   def destroy

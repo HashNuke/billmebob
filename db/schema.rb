@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20100328165402) do
   create_table "items", :force => true do |t|
     t.string   "invoice_id"
     t.string   "name"
-    t.integer  "quantity"
+    t.integer  "quantity",                                  :default => 0
     t.decimal  "cost",       :precision => 10, :scale => 2, :default => 0.0
     t.datetime "created_at"
     t.datetime "updated_at"

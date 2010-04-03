@@ -73,7 +73,7 @@
         %div{:class=>"itemlist span-24 last"}
           %div{:class=>"span-7 iname"}
             =builder.hidden_field :_destroy
-            =image_tag("delete.png", :class=>"delete_item")
+            =image_tag "delete.png", :class=>"delete_item"
             =builder.text_field :name
           %div{:class=>"span-3 iquantity"}
             =builder.text_field :quantity
@@ -83,6 +83,8 @@
           %div{:class=>"span-3 last itax"}
             =builder.text_field :tax
             \%
+    %div{:class=>"add_item_button span-24 last"}
+      = link_to_add_fields "Add item", f, :items
     %div{:class=>"formbuttons span-16"}
       = f.submit 'Create', :class=>"submitbutton"
       or

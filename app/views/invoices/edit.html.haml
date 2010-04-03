@@ -52,7 +52,7 @@
         Issued on: 
         = f.text_field :issued_on, :size=>"8"
       .span-7
-        = f.check_box :show_due_date
+        = check_box_tag "show_due"
         Show due date: 
         = f.text_field :due_by, :size=>"8"
 
