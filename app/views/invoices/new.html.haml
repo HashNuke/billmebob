@@ -58,15 +58,19 @@
     %div{:class=>"als span-23 last"}
       ="&nbsp;".html_safe
     
-    %div{:class=>"datefields span-20 last"}
+    %div{:class=>"datefields span-24 last"}
       .span-5
         Issued on: 
         = f.text_field :issued_on, :size=>"8"
-      .span-7
+      .span-6
         = check_box_tag "show_due"
-        Show due date 
+        Show due date
+        %br 
         = f.text_field :due_by, :size=>"8"
-
+      %div{:class=>"span-11 shorturlbox"}
+        = f.label "Short url: "
+        %span{:class=>"urlprefix"} http://invoicer.com/
+        = f.text_field :shorturl, :size=>"25"
     %div{:class=>"als span-23 last"}
       ="&nbsp;".html_safe
       
@@ -120,4 +124,4 @@
         %span{:class=>"formtotal"}
           0
     %div{:class=>"formbuttons span-24"}
-      = f.submit 'Create', :class=>"submitbutton"
+      = f.submit 'Create invoice', :class=>"submitbutton"

@@ -1,7 +1,7 @@
 class InvoicesController < ApplicationController
 
   def index
-    render :new
+    redirect_to :root
   end
 
   def new
@@ -15,7 +15,7 @@ class InvoicesController < ApplicationController
       @invoice.issued_on=Date.today.to_s
     end
     if @invoice.save
-      redirect_to @invoice
+      redirect_to shorturl_path(@invoice)
     else
       if @invoice.items.length==0
         3.times {@invoice.items.build}
@@ -52,11 +52,24 @@ class InvoicesController < ApplicationController
   def destroy
     @invoice = Invoice.find(params[:id])
     @invoice.destroy
-    redirect_to :new
+    redirect_to :root
   end
 
   def about
     
   end
 
+  def checkurl
+    @render_val = validate_shortlink(params[:id])
+    render :layout=>false
+  end
+
+  def validate_shortlink(s)
+    cval = (s=~/\A(?!(invoices|invoice|bill|bills|product|products|item|items)\Z).*\Z/i)
+    if cval==nil
+      return 1
+    else
+      return 0
+    end
+  end
 end

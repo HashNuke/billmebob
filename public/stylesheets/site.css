@@ -126,7 +126,7 @@ body { background: #eeeeee; }
   font-family: Georgia;
   font-size: 120%;
 }
-.als { margin-top: 30px; }
+.als { margin-top: 20px; }
 .prodserv .itemhead {
   background: #eeeeee;
   border: 1px dashed #999999;
@@ -171,6 +171,14 @@ body { background: #eeeeee; }
 .prodserv .itemlist .itax input {
   width: 20px;
   padding: 2px;
+}
+.datefields { font-family: Georgia; }
+.datefields #show_due { margin-top: 8px; }
+.datefields .shorturlbox .fieldWithErrors input { border: 1px solid #ff0000; }
+.datefields .shorturlbox .urlprefix {
+  color: #666666;
+  font-size: 120%;
+  font-family: Arial;
 }
 .qmenu .qselected {
   text-align: center;

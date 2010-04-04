@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100328165402) do
+ActiveRecord::Schema.define(:version => 20100404022402) do
 
   create_table "invoices", :force => true do |t|
     t.string   "by_company"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20100328165402) do
     t.decimal  "discount",       :default => 0.0
     t.date     "due_by"
     t.date     "issued_on"
+    t.string   "shorturl"
   end
 
   create_table "items", :force => true do |t|

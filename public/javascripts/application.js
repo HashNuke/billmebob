@@ -6,6 +6,7 @@ jQuery(document).ready(function($){
         $(".delete_item").live("click", function(){
                 $(this).prev().val("1");
                 $(this).parent().parent().empty();
+                calculate_total();
             });
 
         $("#show_due").change(function(){
