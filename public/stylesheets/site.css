@@ -50,15 +50,28 @@ body { background: #eeeeee; }
   height: 6px;
   background: url(/images/sw.gif) no-repeat bottom left;
 }
-.header .boxcontent { padding: 0px 6px 0px 6px; }
+.header .boxcontent {
+  height: 30px;
+  padding: 0px 6px 0px 6px;
+}
 #navbar {
-  margin-top: 5px;
+  height: 30px;
+  margin-top: 0px;
   margin-bottom: 5px;
   margin-left: 10px;
   list-style-type: none;
 }
-#navbar li { list-style: none; }
+#navbar .navlink {
+  padding-top: 8px;
+  padding-left: 10px;
+}
+#navbar .logo { padding-right: 20px; }
+#navbar li {
+  float: left;
+  list-style: none;
+}
 #navbar li a {
+  font-size: 120%;
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
@@ -174,7 +187,8 @@ body { background: #eeeeee; }
 }
 .datefields { font-family: Georgia; }
 .datefields #show_due { margin-top: 8px; }
-.datefields .shorturlbox .fieldWithErrors input { border: 1px solid #ff0000; }
+.datefields .shorturlbox .fieldWithErrors { padding-right: 18px; }
+.datefields .shorturlbox .fieldWithErrors input { border: 1px solid #990000; }
 .datefields .shorturlbox .urlprefix {
   color: #666666;
   font-size: 120%;
