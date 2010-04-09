@@ -58,9 +58,11 @@ Billmebob::Application.routes.draw do |map|
   # Note: This route will make all actions in every controller accessible via GET requests.
   
   root :to=>"invoices#new"
-  match '/invoices/checkurl/'=>'invoices#checkurl', :as=>"checkurl"
+  #match '/invoices/checkurl/'=>'invoices#checkurl', :as=>"checkurl"
+  
+  
   resources :invoices
-  match ':id'=>'invoices#show', :as=>"shorturl"
+  match ':shorturl'=>'invoices#show', :as=>"shorturl"
   
   match ':controller(/:action(/:id(.:format)))'
 

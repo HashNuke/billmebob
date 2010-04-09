@@ -14,8 +14,11 @@ class InvoicesController < ApplicationController
     if @invoice.issued_on.nil?
       @invoice.issued_on=Date.today.to_s
     end
+    
+    @invoice.shorturl = Digest::SHA1.hexdigest(@invoice.id.to_s + DateTime.now.to_s)
+
     if @invoice.save
-      redirect_to shorturl_path(@invoice)
+      redirect_to "/"+@invoice.shorturl
     else
       if @invoice.items.length==0
         3.times {@invoice.items.build}
@@ -35,7 +38,8 @@ class InvoicesController < ApplicationController
   end
 
   def show
-    @invoice = Invoice.find(params[:id])
+    @invoice = Invoice.where({:shorturl => params[:shorturl]}).first
+    
     if(@invoice.template=="both")
       render :template => "invoices/templates/both.html.haml"
     end
@@ -48,6 +52,8 @@ class InvoicesController < ApplicationController
       render :template => "invoices/templates/right.html.haml"
     end 
   end
+
+
   
   def destroy
     @invoice = Invoice.find(params[:id])
@@ -59,17 +65,16 @@ class InvoicesController < ApplicationController
     
   end
 
-  def checkurl
-    @render_val = validate_shortlink(params[:id])
-    render :layout=>false
-  end
 
+  private
+  
   def validate_shortlink(s)
     cval = (s=~/\A(?!(invoices|invoice|bill|bills|product|products|item|items)\Z).*\Z/i)
     if cval==nil
-      return 1
+      return -1
     else
       return 0
     end
   end
+
 end
