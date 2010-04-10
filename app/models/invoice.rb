@@ -9,4 +9,9 @@ class Invoice < ActiveRecord::Base
   #validates_uniqueness_of :shorturl, :allow_blank=>true
   #validates_length_of :shorturl, :minimum=>3, :maximum=>20
   #validates_format_of :shorturl, :with=>/\A(?!(invoices|invoice|bill|bills|product|products|item|items)\Z).*\Z/i
+  
+  def validate
+    errors.add_to_base "Enter atleast one product" if items.empty?
+  end
+  
 end

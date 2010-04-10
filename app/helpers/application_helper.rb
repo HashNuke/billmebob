@@ -42,7 +42,7 @@ module ApplicationHelper
           #error_messages = objects.sum {|object| object.errors.full_messages.map {|msg| content_tag(:li, ERB::Util.html_escape(msg)) } }.join
           error_messages = objects.map {|object| object.errors.collect{ |column,error| content_tag( :li, error ) } } 
 
-          contents = 'Just make sure you entered all the required fields :) '
+          contents = 'Just make sure you entered all the required fields and atleast one product :) '
           #contents << content_tag(:ul, error_messages)
 
           content_tag(:div, contents, html)
