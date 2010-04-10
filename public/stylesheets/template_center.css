@@ -41,17 +41,29 @@
 }
 
 .bycomp{
-    font-size: 230%;
+    text-align: center;
+    font-family: Georgia;
+    font-size: 200%;
 }
 
 .byaddr{
+    text-align: center;
     font-size: 120%;
     color: #666666;
 }
 
+.byaddr p{
+    margin-bottom: 5px;
+}
+
+.topsepbdr{
+    border-top: 1px solid #666666;
+    font-size: 100%;
+    margin-top: 0px;
+}
+
 .tocomp{
     font-size: 130%;
-    font-weight: bold;
 }
 
 .toaddr{
@@ -78,7 +90,7 @@
 }
 
 .fieldtitle{
-    text-align: right;
+    text-align: left;
     margin-top: 3px;
 }
 
