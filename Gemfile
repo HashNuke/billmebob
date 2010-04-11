@@ -2,7 +2,7 @@
 source 'http://gemcutter.org'
 
 
-gem "rails", "3.0.0.beta2"
+gem "rails", "3.0.0.beta"
 
 ## Bundle edge rails:
 # gem "rails", :git => "git://github.com/rails/rails.git"
@@ -24,11 +24,11 @@ gem "sqlite3-ruby", :require => "sqlite3"
 # end
 
 gem "warden"
-gem "devise"
+#gem "devise"
 gem "haml"
-gem "webrat"
+#gem "webrat"
 gem "database_cleaner"
-gem "cucumber-rails"
-gem "rspec-rails", ">= 2.0.0.beta.1"
+#gem "cucumber-rails"
+#gem "rspec-rails", ">= 2.0.0.beta.1"
 #gem "formtastic"
 #gem "paperclip", :git => "git://github.com/JasonKing/paperclip.git"
