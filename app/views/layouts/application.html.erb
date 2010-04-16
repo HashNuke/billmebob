@@ -2,9 +2,11 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-    <title>BillMeBob</title>
+    <title>BillMeBob.com - create invoices online in an instant for free</title>
+    <meta name="description" content="Create invoices online in an instant for free. No signup required."/>
+    <meta name="keywords" content="create free invoice, online invoice, BillMebob">
     <link href='/stylesheets/blueprint/screen.css' media='screen, projection' rel='stylesheet' type='text/css' />
-    <link href='/stylesheets/blueprint/print.css' media='print' rel='stylesheet' type='text/css' />
+    <link href='/stylesheets/cusprint.css' media='print' rel='stylesheet' type='text/css' />
     <%= yield(:header) %>
     <!--[if IE]>
       <link href='/stylesheets/blueprint/ie.css' media='screen, projection' rel='stylesheet' type='text/css' />
@@ -18,6 +20,10 @@
             <div class='boxcontent'>
               <ul id="navbar">
                 <li class="logo"><%= image_tag "billmebob.png" %></li>
+                <%- if params[:action]=="show" %>
+                  <li class="printlink"><button class="printbutton" onclick="window.print(); return false;">Print this invoice</button></li>
+                  <li class="or">or</li>
+                <%- end %>
                 <li class="navlink"><%= link_to "New Invoice", "/invoices/new" %></li>
               </ul>
             </div>
@@ -37,9 +43,21 @@
         <%= yield %>
       </div>
       <div class="span-24 last footer">
-        <p>&copy;2010 Akash Manohar</p>
+        <%- if params[:action]!="show" %>
+          <p>&copy;2010 SingAlong</p>
+        <%- end %>
       </div>
     </div>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      try {
+      var pageTracker = _gat._getTracker("UA-15883278-1");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
   </body>
 </html>
 

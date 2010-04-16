@@ -76,6 +76,12 @@ body { background: #eeeeee; }
   font-weight: bold;
   text-decoration: none;
 }
+#navbar .printlink .printbutton {
+  color: #ffffff;
+  font-family: Arial;
+  margin-left: 20px;
+  font-size: 120%;
+}
 .topsep { border: 1px dashed #cccccc; }
 .content { padding: 10px; }
 .content label {

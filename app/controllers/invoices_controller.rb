@@ -39,18 +39,21 @@ class InvoicesController < ApplicationController
 
   def show
     @invoice = Invoice.where({:shorturl => params[:shorturl]}).first
-    
-    if(@invoice.template=="both")
-      render :template => "invoices/templates/both.html.haml"
-    end
+    if @invoice.nil?
+      render "invalid.html.haml", :layout=>false
+    else
+      if(@invoice.template=="both")
+        render :template => "invoices/templates/both.html.haml"
+      end
 
-    if(@invoice.template=="center")
-      render :template => "invoices/templates/center.html.haml"
-    end
+      if(@invoice.template=="center")
+        render :template => "invoices/templates/center.html.haml"
+      end
 
-    if(@invoice.template=="right")
-      render :template => "invoices/templates/right.html.haml"
-    end 
+      if(@invoice.template=="right")
+        render :template => "invoices/templates/right.html.haml"
+      end 
+    end
   end
 
 

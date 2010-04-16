@@ -1,5 +1,5 @@
 - content_for :header do 
-  = stylesheet_link_tag "template_center"
+  = stylesheet_link_tag "template_center", :media=>"screen,print"
 
 
 %div{:class=>"bycomp span-24 last"}
@@ -32,13 +32,13 @@
   &nbsp;
 
 %div{:class=>"producthead span-23 last"}
-  %div{:class=>"span-14 first"}
+  %div{:class=>"span-10 first"}
     =@invoice.item_title
-  %div{:class=>"span-2"}
+  %div{:class=>"span-3"}
     =@invoice.cost_title
-  %div{:class=>"span-2"}
+  %div{:class=>"span-3"}
     =@invoice.quantity_title
-  %div{:class=>"span-2"}
+  %div{:class=>"span-3"}
     Cost
   %div{:class=>"span-3 last"}
     =@invoice.tax_title
@@ -47,14 +47,14 @@
 -@total_tax=0
 -@invoice.items.each do |product|
   %div{:class=>"eachprod span-23"}
-    %div{:class=>"span-14 first"}
+    %div{:class=>"span-10 first"}
       =product.name
-    %div{:class=>"span-2"}
+    %div{:class=>"span-3"}
       -@eachcost="%.2f" % product.cost
       =@invoice.currency + (@eachcost)
-    %div{:class=>"span-2"}
+    %div{:class=>"span-3"}
       =product.quantity
-    %div{:class=>"span-2"}
+    %div{:class=>"span-3"}
       -@product_cost = product.quantity*product.cost
       -@total_cost=@total_cost+@product_cost
       -@eachcost="%.2f" % (product.quantity*product.cost)
@@ -64,18 +64,18 @@
       =product.tax.to_s + "%"
 
 %div{:class=>"totalhead span-24 last"}
-  %div{:class=>"span-16"}
+  %div{:class=>"span-14"}
     &nbsp;
-  %div{:class=>"span-2"}
+  %div{:class=>"span-4 bspbox"}
     %span{:class=>"bsp"}
       Sub-total
   %div{:class=>"span-3 last"}
     &nbsp;&nbsp;&nbsp;&nbsp;
     -@eachcost="%.2f" % @total_cost
     =@invoice.currency+@eachcost
-  %div{:class=>"span-16"}
+  %div{:class=>"span-14"}
     &nbsp;
-  %div{:class=>"span-2"}
+  %div{:class=>"span-4 bspbox"}
     %span{:class=>"bsp"}
       Total tax
   %div{:class=>"span-3 last"}
@@ -83,9 +83,9 @@
     -@eachcost="%.2f" % @total_tax
     =@invoice.currency + @eachcost.to_s
 %div{:class=>"totalhead span-24"}  
-  %div{:class=>"span-16 first"}
+  %div{:class=>"span-14 first"}
     &nbsp;
-  %div{:class=>"bspa span-2"}
+  %div{:class=>"bspa bspbox span-4"}
     %span
       Total
   %div{:class=>"totalamt span-3 last"}

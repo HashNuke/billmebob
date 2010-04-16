@@ -21,6 +21,19 @@
   text-decoration: none;
 }
 
+#navbar .or{
+    color: #ffffff;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.printlink .printbutton{
+    font-family: Arial;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 140%;
+}
+
 .header .box {
   padding: 0px;
   background: #333333;
@@ -123,4 +136,8 @@
     margin-top: 50px;
     text-align: center;
     color: #999999;
+}
+
+.bspbox{
+    text-align: right;
 }
