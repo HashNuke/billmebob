@@ -19,7 +19,7 @@
           <div class='boxtop'><div></div></div>
             <div class='boxcontent'>
               <ul id="navbar">
-                <li class="logo"><%= image_tag "billmebob.png" %></li>
+                <li class="logo"><a href="/" alt="BillMeBob.com"><%= image_tag "billmebob.png" %></a></li>
                 <%- if params[:action]=="show" %>
                   <li class="printlink"><button class="printbutton" onclick="window.print(); return false;">Print this invoice</button></li>
                   <li class="or">or</li>
