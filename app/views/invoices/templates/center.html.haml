@@ -1,29 +1,29 @@
 - content_for :header do 
   = stylesheet_link_tag "template_center", :media=>"screen,print"
 
-
 %div{:class=>"bycomp span-24 last"}
   =@invoice.by_company
 %div{:class=>"byaddr span-24 last"}
   !=simple_format(@invoice.by_address)
 
-%div{:class=>"topsepbdr span-24"}
+%div{:class=>"topsepbdr span-24 first last"}
   &nbsp;
 
-%div{:class=>"fieldtitle span-6 first last"}
-  %span
-    Customer:
-  %div{:class=>"span-5 last"}
-    %div{:class=>"tocomp span-5 last"}
+%div{:class=>"toinfo span-24 first last"}
+  %div{:class=>"span-18"}
+    %div{:class=>"span-5 last fieldtitle"}
+      Customer:
+    %div{:class=>"tocomp span-18 last"}
       =@invoice.to_company
-    %div{:class=>"toaddr span-5 last"}
+    %div{:class=>"toaddr span-14 last"}
       !=simple_format(@invoice.to_address)
-    %div{:class=>"date span-10 last"}
-      Date: 
+  %div{:class=>"datebox span-5 last"}    
+    %div{:class=>"date span-5 last"}
+      %span{:class=>"fldlbl"}Date: 
       =@invoice.issued_on
     - if !@invoice.due_by.nil?
-      %div{:class=>"date span-10 last"}
-        Due by: 
+      %div{:class=>"date span-5 last"}
+        %span{:class=>"fldlbl"}Due by: 
         =@invoice.due_by
 
 %div{:class=>"topsep span-24 last"}
@@ -92,4 +92,6 @@
     &nbsp;&nbsp;&nbsp;
     -@eachcost="%.2f"%(@total_tax+@total_cost)
     =@invoice.currency+@eachcost.to_s
-  
+
+%div{:class=>"strayfoot span-24 first last"}
+  &nbsp;

@@ -73,6 +73,10 @@
 }
 
 .date{
+    font-size: 110%
+}
+
+.date .fldlbl{
     font-weight: bold;
 }
 

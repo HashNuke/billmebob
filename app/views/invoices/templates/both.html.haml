@@ -7,11 +7,11 @@
   %div{:class=>"byaddr span-11 last"}
     !=simple_format(@invoice.by_address)
   %div{:class=>"date span-10 last"}
-    Date: 
+    %span{:class=>"fldlbl"}Date: 
     =@invoice.issued_on
   - if !@invoice.due_by.nil?
     %div{:class=>"date span-10 last"}
-      Due by: 
+      %span{:class=>"fldlbl"} Due by: 
       =@invoice.due_by
 
 %div{:class=>"fieldtitle span-6 last"}
