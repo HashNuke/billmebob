@@ -1,13 +1,15 @@
 - content_for :header do 
   = stylesheet_link_tag "template_center", :media=>"screen,print"
+  = stylesheet_link_tag "cusprint", :media=>"print"
 
 %div{:class=>"bycomp span-24 last"}
   =@invoice.by_company
 %div{:class=>"byaddr span-24 last"}
   !=simple_format(@invoice.by_address)
 
-%div{:class=>"topsepbdr span-24 first last"}
-  &nbsp;
+%div{:class=>"span-24 first last"}
+  %div{:class=>"topsepbdr", :style=>"width:98%"}
+    &nbsp;
 
 %div{:class=>"toinfo span-24 first last"}
   %div{:class=>"span-18"}
@@ -88,8 +90,8 @@
   %div{:class=>"bspa bspbox span-4"}
     %span
       Total
-  %div{:class=>"totalamt span-3 last"}
-    &nbsp;&nbsp;&nbsp;
+  %div{:class=>"totalamt span-5 last"}
+    &nbsp;&nbsp;
     -@eachcost="%.2f"%(@total_tax+@total_cost)
     =@invoice.currency+@eachcost.to_s
 

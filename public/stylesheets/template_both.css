@@ -72,12 +72,23 @@
     color: #666666;
 }
 
+.topsep{
+    margin-top: 50px;
+}
+
+#datebox{
+    margin-bottom: 30px;
+}
+
 .date{
-    font-size: 110%
+    color: #000000;
+    font-size: 110%;
 }
 
 .date .fldlbl{
+    color: #666666;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .topsep{
@@ -89,9 +100,9 @@
     text-transform: uppercase;
     font-weight: bold;
     background: #eeeeee;
-    border: 1px dashed #999999;
-    padding-left: 15px;
-    padding-right: 15px;
+    border: 1px dashed #cccccc;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .fieldtitle{
@@ -109,8 +120,8 @@
 .eachprod{
     font-size: 120%;
     margin-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .totalhead{

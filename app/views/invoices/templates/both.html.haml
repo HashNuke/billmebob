@@ -1,18 +1,20 @@
 - content_for :header do 
   = stylesheet_link_tag "template_both", :media=>"screen,print"
+  = stylesheet_link_tag "cusprint", :media=>"print"
 
 %div{:class=>"span-12 first"}
   %div{:class=>"bycomp span-11 last"}
     =@invoice.by_company
   %div{:class=>"byaddr span-11 last"}
     !=simple_format(@invoice.by_address)
-  %div{:class=>"date span-10 last"}
-    %span{:class=>"fldlbl"}Date: 
-    =@invoice.issued_on
-  - if !@invoice.due_by.nil?
-    %div{:class=>"date span-10 last"}
-      %span{:class=>"fldlbl"} Due by: 
-      =@invoice.due_by
+  %div{:class=>"span-24 first last", :id=>"datebox"}
+    %div{:class=>"date span-6 last"}
+      %span{:class=>"fldlbl"}Date: 
+      =@invoice.issued_on
+    - if !@invoice.due_by.nil?
+      %div{:class=>"date span-6 last"}
+        %span{:class=>"fldlbl"} Due by: 
+        =@invoice.due_by
 
 %div{:class=>"fieldtitle span-6 last"}
   %span
@@ -83,8 +85,8 @@
   %div{:class=>"bspa bspbox span-4"}
     %span
       Total
-  %div{:class=>"totalamt span-3 last"}
-    &nbsp;&nbsp;&nbsp;
+  %div{:class=>"totalamt span-5 last"}
+    &nbsp;&nbsp;
     -@eachcost="%.2f"%(@total_tax+@total_cost)
     =@invoice.currency+@eachcost.to_s
   

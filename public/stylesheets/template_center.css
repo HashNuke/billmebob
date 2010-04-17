@@ -73,6 +73,9 @@
     border-top: 1px solid #999999;
     font-size: 100%;
     margin-top: 0px;
+    padding: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 .toinfo{
@@ -102,7 +105,7 @@
 }
 
 .datebox .date{
-    color: #333333;
+    color: #000000;
     font-size: 115%;
 }
 
@@ -121,16 +124,16 @@
     text-transform: uppercase;
     font-weight: bold;
     background: #eeeeee;
-    border: 1px dashed #999999;
-    padding-left: 15px;
-    padding-right: 15px;
+    border: 1px dashed #cccccc;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .eachprod{
     font-size: 120%;
     margin-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .totalhead{
