@@ -19,10 +19,23 @@ jQuery(document).ready(function($){
                 $(".currency_symbol").html($(this).val());
             });
 
-        $('.qmenu .qselected').live('click', function(){
+        $(".qmenu .qselected").live('click', function(){
                 $(".qmenu .qitems").toggle();
             });
-
+               
+        $("#invoice_item_title").change(function(){
+            if($(this).val()=="Products" || $(this).val()=="Articles")
+            {
+                $("#invoice_quantity_title").val("Quantity");
+                $("#invoice_cost_title").val("Per Unit");
+            }
+            if($(this).val()=="Services")
+            {
+                $("#invoice_quantity_title").val("Hours");
+                $("#invoice_cost_title").val("Per Hour");
+            }
+        });
+        
         $(".qmenu .qitems .qitem").bind('click', function(){
                 $(".qmenu .qselected").html($(this).html()+'<div class="down_arr">Template</div>');
                 $("#invoice_template").val($(this).children().eq(0).attr('alt'));

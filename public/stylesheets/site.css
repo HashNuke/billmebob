@@ -76,12 +76,6 @@ body { background: #eeeeee; }
   font-weight: bold;
   text-decoration: none;
 }
-#navbar .printlink .printbutton {
-  color: #ffffff;
-  font-family: Arial;
-  margin-left: 20px;
-  font-size: 120%;
-}
 .topsep { border: 1px dashed #cccccc; }
 .content { padding: 10px; }
 .content label {
@@ -146,6 +140,7 @@ body { background: #eeeeee; }
   font-size: 120%;
 }
 .als { margin-top: 20px; }
+.delete_item { cursor: pointer; }
 .prodserv .itemhead {
   background: #eeeeee;
   border: 1px dashed #999999;
@@ -232,6 +227,7 @@ body { background: #eeeeee; }
   text-align: center;
 }
 .footer p {
+  margin-top: 20px;
   text-align: center;
   color: #999999;
 }
