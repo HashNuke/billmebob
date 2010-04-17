@@ -28,6 +28,10 @@ Billmebob::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
+  ActionView::Base.field_error_proc = Proc.new do |html_tag, instance_tag|
+    "<span class='fieldWithErrors'>#{html_tag}</span>".html_safe
+  end
+
   # Enable threaded mode
   # config.threadsafe!
 end
