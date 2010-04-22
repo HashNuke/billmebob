@@ -93,7 +93,12 @@ function calculate_total()
         taxtotal=taxtotal+nowTax;
         formtotal=formtotal+withtax;
     });
-    $(".subtotalval").html(subtotal);
-    $(".taxval").html(taxtotal);
-    $(".formtotal").html(formtotal);
+    $(".subtotalval").html(roundNum(subtotal,2));
+    $(".taxval").html(roundNum(taxtotal,2));
+    $(".formtotal").html(roundNum(formtotal,2));
+}
+
+function roundNum(num, dec) {
+	var result = Math.round(num*Math.pow(10,dec))/Math.pow(10,dec);
+	return result;
 }
