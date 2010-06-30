@@ -1,5 +1,14 @@
 body { background: #eeeeee; }
 .container { background: #ffffff; }
+.tym {
+  color: #d66666;
+  background: #f6f6ef;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 120%;
+  text-align: center;
+}
 .introbox {
   background: #feefb3;
   border: 1px solid #9f6000;

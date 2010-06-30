@@ -7,6 +7,10 @@
   = javascript_include_tag "rails"
   = javascript_include_tag "application"
 
+%div{:class=>"span-23 first last"}
+  %div{:class=>"tym"}
+    A lot of bug fixes and we have moved to a new server. Thank you for your support!
+
 - form_for @invoice, :url=>{:action=>"create"} do |f|
   = f.error_messages  
   %div{:class=>"span-24 last"}
