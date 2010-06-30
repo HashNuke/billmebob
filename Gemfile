@@ -24,7 +24,7 @@ gem "sqlite3-ruby", :require => "sqlite3"
 # end
 
 gem "warden"
-gem "devise", "1.1.rc1"
+gem "devise", "1.1.rc2"
 gem "haml"
 # gem "webrat"
 # gem "database_cleaner"
