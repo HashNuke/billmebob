@@ -9,26 +9,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100630111312) do
+ActiveRecord::Schema.define(:version => 20100630114810) do
 
   create_table "invoices", :force => true do |t|
-    t.string   "by_company"
-    t.string   "by_address"
-    t.string   "to_company"
-    t.string   "to_address"
+    t.text     "by_company",     :limit => 255
+    t.text     "by_address",     :limit => 255
+    t.text     "to_company",     :limit => 255
+    t.text     "to_address",     :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "item_title"
-    t.string   "quantity_title"
-    t.string   "cost_title"
-    t.string   "tax_title"
-    t.string   "currency"
-    t.string   "template",       :default => "both"
-    t.string   "discount_type",  :default => "%"
-    t.decimal  "discount",       :default => 0.0
+    t.text     "item_title",     :limit => 255
+    t.text     "quantity_title", :limit => 255
+    t.text     "cost_title",     :limit => 255
+    t.text     "tax_title",      :limit => 255
+    t.text     "currency",       :limit => 255
+    t.text     "template",       :limit => 255, :default => "both"
+    t.text     "discount_type",  :limit => 255, :default => "%"
+    t.decimal  "discount",                      :default => 0.0
     t.date     "due_by"
     t.date     "issued_on"
-    t.string   "shorturl"
+    t.text     "shorturl",       :limit => 255
   end
 
   create_table "items", :force => true do |t|
