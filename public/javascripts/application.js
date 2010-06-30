@@ -86,8 +86,12 @@ function calculate_total()
             parseInt($(this).parent().prev().children().eq(0).val());
         subtotal=subtotal+(parseFloat($(this).val()) *
             parseInt($(this).parent().prev().children().eq(0).val()));
-        nowTax=(parseFloat($(this).val()) *
+        if ( isNaN(parseFloat($(this).parent().next().children().eq(0).val())) )
+           nowTax=0;
+        else
+           nowTax=(parseFloat($(this).val()) *
             parseInt($(this).parent().prev().children().eq(0).val())/100)*parseFloat($(this).parent().next().children().eq(0).val());
+        
         withtax=parseFloat($(this).val()) *
             parseInt($(this).parent().prev().children().eq(0).val())+nowTax;
         taxtotal=taxtotal+nowTax;
