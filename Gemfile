@@ -11,6 +11,7 @@ gem "rails", "3.0.6"
 # Rails has selected sqlite3.
 
 gem "sqlite3"
+gem 'dynamic_form'
 gem "haml"
 
 ## Bundle the gems you use:
