@@ -47,19 +47,19 @@ jQuery(document).ready(function($){
         $(".qmenu .qitems").hide();
         $(".qmenu .qselected").html($(".qmenu .qitems .qitem:first").html()+'<div class="down_arr">Template</div>');
         
-        $(".icost input").change(function(){
+    $(".icost input").live('change', function(){
             if($(this).val()=="")
                 $(this).val("0");
             calculate_total();
         });
         
-        $(".iquantity input").change(function(){
+    $(".iquantity input").live('change', function(){
             if($(this).val()=="")
                 $(this).val("0");
             calculate_total();
         });
         
-        $(".itax input").change(function(){
+    $(".itax input").live('change', function(){
             if($(this).val()=="")
                 $(this).val("0");
             calculate_total();
