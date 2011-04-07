@@ -2,14 +2,16 @@
 source 'http://gemcutter.org'
 
 
-gem "rails", "3.0.3"
+gem "rails", "3.0.6"
 
 ## Bundle edge rails:
 # gem "rails", :git => "git://github.com/rails/rails.git"
 
 # ActiveRecord requires a database adapter. By default,
 # Rails has selected sqlite3.
-gem "sqlite3-ruby", :require => "sqlite3"
+
+gem "sqlite3"
+gem "haml"
 
 ## Bundle the gems you use:
 # gem "bj"
@@ -23,9 +25,7 @@ gem "sqlite3-ruby", :require => "sqlite3"
 #   gem "webrat"
 # end
 
-gem "warden"
-gem "devise", "1.1.rc2"
-gem "haml"
+
 # gem "webrat"
 # gem "database_cleaner"
 # gem "cucumber-rails"
