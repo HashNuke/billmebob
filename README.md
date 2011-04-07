@@ -1,6 +1,8 @@
-BILL-ME-BOB
+BillMeBob
 ============
 
 * Create invoices (3 simple templates)
 * Share them with short urls
-* Download as PDF or Visa XML
+
+Currently hosted at [billmebob.com](http://billmebob.com)
+
