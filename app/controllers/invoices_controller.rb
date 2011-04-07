@@ -50,13 +50,8 @@ class InvoicesController < ApplicationController
         render :template => "invoices/templates/center.html.haml"
       end
 
-      if(@invoice.template=="right")
-        render :template => "invoices/templates/right.html.haml"
-      end 
     end
   end
-
-
   
   def destroy
     @invoice = Invoice.find(params[:id])
